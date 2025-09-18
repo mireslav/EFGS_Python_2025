@@ -4331,15 +4331,23 @@ vertical-align: -.125em;
   </ul></li>
   <li><a href="#introducing-the-geopackage" id="toc-introducing-the-geopackage" class="nav-link" data-scroll-target="#introducing-the-geopackage"><i class="bi-database " style="color: brown;" role="img" aria-hidden="true"></i> Introducing the GeoPackage</a></li>
   <li><a href="#shapefiles-vs-geopackages" id="toc-shapefiles-vs-geopackages" class="nav-link" data-scroll-target="#shapefiles-vs-geopackages"><i class="bi-plus-slash-minus " style="color: red;" role="img" aria-hidden="true"></i> Shapefiles vs GeoPackages</a></li>
-  <li><a href="#saving-the-dataset-as-a-geopackage" id="toc-saving-the-dataset-as-a-geopackage" class="nav-link" data-scroll-target="#saving-the-dataset-as-a-geopackage"><i class="bi-file-arrow-up " style="color: darkblue;" role="img" aria-hidden="true"></i> Saving the dataset as a GeoPackage</a></li>
+  <li><a href="#saving-the-dataset-as-a-geopackage" id="toc-saving-the-dataset-as-a-geopackage" class="nav-link" data-scroll-target="#saving-the-dataset-as-a-geopackage"><i class="bi-file-arrow-down " style="color: darkblue;" role="img" aria-hidden="true"></i> Saving the dataset as a GeoPackage</a></li>
   </ul></li>
   <li><a href="#exploring-a-geodataframe-with-geopandas" id="toc-exploring-a-geodataframe-with-geopandas" class="nav-link" data-scroll-target="#exploring-a-geodataframe-with-geopandas"><span class="header-section-number">3</span> Exploring a GeoDataFrame with GeoPandas</a>
   <ul class="collapse">
   <li><a href="#list-column-names" id="toc-list-column-names" class="nav-link" data-scroll-target="#list-column-names"><i class="bi-card-list " style="color: gray;" role="img" aria-hidden="true"></i> List column names</a></li>
   <li><a href="#inspect-and-adjust-data-types-of-columns" id="toc-inspect-and-adjust-data-types-of-columns" class="nav-link" data-scroll-target="#inspect-and-adjust-data-types-of-columns"><i class="bi-journal-text " style="color: seagreen;" role="img" aria-hidden="true"></i> Inspect and adjust data types of columns</a></li>
   <li><a href="#check-the-coordinate-reference-system-crs" id="toc-check-the-coordinate-reference-system-crs" class="nav-link" data-scroll-target="#check-the-coordinate-reference-system-crs"><i class="bi-globe " style="color: steelblue;" role="img" aria-hidden="true"></i> Check the coordinate reference system (CRS)</a></li>
+  <li><a href="#reprojecting-a-geodataframe" id="toc-reprojecting-a-geodataframe" class="nav-link" data-scroll-target="#reprojecting-a-geodataframe"><i class="bi-arrow-repeat " style="color: blue;" role="img" aria-hidden="true"></i> Reprojecting a GeoDataFrame</a></li>
   <li><a href="#get-the-spatial-extent-of-the-dataset" id="toc-get-the-spatial-extent-of-the-dataset" class="nav-link" data-scroll-target="#get-the-spatial-extent-of-the-dataset"><i class="bi-aspect-ratio-fill " style="color: darkgreen;" role="img" aria-hidden="true"></i> Get the spatial extent of the dataset</a></li>
   <li><a href="#check-geometry-types-of-your-data" id="toc-check-geometry-types-of-your-data" class="nav-link" data-scroll-target="#check-geometry-types-of-your-data"><i class="bi-bar-chart-line " style="color: orange;" role="img" aria-hidden="true"></i> Check geometry types of your data</a></li>
+  </ul></li>
+  <li><a href="#use-case-part-1-exploring-the-oslo-building-layer" id="toc-use-case-part-1-exploring-the-oslo-building-layer" class="nav-link" data-scroll-target="#use-case-part-1-exploring-the-oslo-building-layer"><span class="header-section-number">4</span> Use case part 1: Exploring the Oslo building layer</a>
+  <ul class="collapse">
+  <li><a href="#import-libraries-and-load-data" id="toc-import-libraries-and-load-data" class="nav-link" data-scroll-target="#import-libraries-and-load-data"><i class="bi-box-arrow-in-down " style="color: royalblue;" role="img" aria-hidden="true"></i> Import Libraries and Load Data</a></li>
+  <li><a href="#perform-joins-for-each-code-level" id="toc-perform-joins-for-each-code-level" class="nav-link" data-scroll-target="#perform-joins-for-each-code-level"><i class="bi-arrow-left-right " style="color: seagreen;" role="img" aria-hidden="true"></i> Perform Joins for Each Code Level</a></li>
+  <li><a href="#filter-columns-to-keep" id="toc-filter-columns-to-keep" class="nav-link" data-scroll-target="#filter-columns-to-keep"><i class="bi-funnel " style="color: darkorange;" role="img" aria-hidden="true"></i> Filter Columns to Keep</a></li>
+  <li><a href="#writing-the-resulting-layer" id="toc-writing-the-resulting-layer" class="nav-link" data-scroll-target="#writing-the-resulting-layer"><i class="bi-cloud-arrow-up " style="color: mediumvioletred;" role="img" aria-hidden="true"></i> Writing the Resulting Layer</a></li>
   </ul></li>
   </ul>
 </nav>
@@ -4603,7 +4611,7 @@ Answer
 </table>
 </section>
 <section id="saving-the-dataset-as-a-geopackage" class="level2">
-<h2 class="anchored" data-anchor-id="saving-the-dataset-as-a-geopackage"><i class="bi-file-arrow-up " style="color: darkblue;" role="img" aria-hidden="true"></i> Saving the dataset as a GeoPackage</h2>
+<h2 class="anchored" data-anchor-id="saving-the-dataset-as-a-geopackage"><i class="bi-file-arrow-down " style="color: darkblue;" role="img" aria-hidden="true"></i> Saving the dataset as a GeoPackage</h2>
 <p>To save the GeoDataFrame as a GeoPackage, use the following code:</p>
 <div class="sourceCode" id="cb10"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="co">#Path for the output GeoPackage</span></span>
 <span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a>gpkg_path <span class="op">=</span> <span class="vs">r&quot;C:</span><span class="er">\</span><span class="vs">EFGS_Python</span><span class="er">\</span><span class="vs">NUTS_RG_20M_2024</span><span class="dv">.</span><span class="vs">gpkg&quot;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -4718,19 +4726,32 @@ dtype: object</code></pre>
 <p>Expected result:</p>
 <pre><code>EPSG:3857</code></pre>
 </section>
+<section id="reprojecting-a-geodataframe" class="level2">
+<h2 class="anchored" data-anchor-id="reprojecting-a-geodataframe"><i class="bi-arrow-repeat " style="color: blue;" role="img" aria-hidden="true"></i> Reprojecting a GeoDataFrame</h2>
+<p>Reprojecting spatial data to a new coordinate reference system (CRS) is a common task in GIS. In just one line of code, you can convert your data to any CRS you need, enabling seamless integration, analysis, and visualization with other datasets.</p>
+<div class="sourceCode" id="cb21"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a><span class="co">#Reproject to EPSG:4326 (WGS84 Latitude/Longitude)</span></span>
+<span id="cb21-2"><a href="#cb21-2" aria-hidden="true" tabindex="-1"></a>gdf_reprojected <span class="op">=</span> gdf.to_crs(epsg<span class="op">=</span><span class="dv">4326</span>)</span>
+<span id="cb21-3"><a href="#cb21-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb21-4"><a href="#cb21-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Verify the new CRS</span></span>
+<span id="cb21-5"><a href="#cb21-5" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(gdf_reprojected.crs)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<blockquote class="blockquote">
+<h3 id="note-3" class="anchored">Note</h3>
+<p>The <code>to_crs()</code> method returns a <strong>new</strong> GeoDataFrame with the geometries reprojected. Your original <code>gdf</code> remains unchanged unless you overwrite it.</p>
+</blockquote>
+</section>
 <section id="get-the-spatial-extent-of-the-dataset" class="level2">
 <h2 class="anchored" data-anchor-id="get-the-spatial-extent-of-the-dataset"><i class="bi-aspect-ratio-fill " style="color: darkgreen;" role="img" aria-hidden="true"></i> Get the spatial extent of the dataset</h2>
 <p>With a simple line of code you can retrieve the spatial extent of the entire dataset as <code>(minx, miny, maxx, maxy)</code>.</p>
-<div class="sourceCode" id="cb21"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a><span class="co">#Printing the bounding box of the dataset</span></span>
-<span id="cb21-2"><a href="#cb21-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(gdf.total_bounds)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb22"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a><span class="co">#Printing the bounding box of the dataset</span></span>
+<span id="cb22-2"><a href="#cb22-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(gdf.total_bounds)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>Expected result:</p>
 <pre><code>[-7024292.9187 -2438388.2778  6214479.1549 16019062.0146]</code></pre>
 </section>
 <section id="check-geometry-types-of-your-data" class="level2">
 <h2 class="anchored" data-anchor-id="check-geometry-types-of-your-data"><i class="bi-bar-chart-line " style="color: orange;" role="img" aria-hidden="true"></i> Check geometry types of your data</h2>
 <p>Another simple line of code will show you what geometry types (e.g., <code>Polygon</code>, <code>Point</code>, <code>LineString</code>) are in your GeoDataFrame and how many features are of each type.</p>
-<div class="sourceCode" id="cb23"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb23-1"><a href="#cb23-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Print counts of each geometry type</span></span>
-<span id="cb23-2"><a href="#cb23-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(gdf.geom_type.value_counts())</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb24"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb24-1"><a href="#cb24-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Print counts of each geometry type</span></span>
+<span id="cb24-2"><a href="#cb24-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(gdf.geom_type.value_counts())</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>How many geometry types do you expect to see in the NUTS dataset?</p>
 <p>Click to reveal the answer below:</p>
 <div class="callout callout-style-default callout-note callout-titled" title="Answer">
@@ -4752,6 +4773,89 @@ MultiPolygon      96</code></pre>
 </div>
 </div>
 </div>
+</section>
+</section>
+<section id="use-case-part-1-exploring-the-oslo-building-layer" class="level1" data-number="4">
+<h1 data-number="4"><span class="header-section-number">4</span> Use case part 1: Exploring the Oslo building layer</h1>
+<p>In the second part of the workshop we will perform some spatial and statistical analyses. We will use a dataset of buildings in Oslo found via the INSPIRE Geoportal.</p>
+<p>The dataset contains building category codes describing different building types across three hierarchical levels. These codes alone aren’t easily readable, so our first goal is to enrich the dataset by joining names from a separate code list table.</p>
+<p>The building layer and the codelist table have been loaded into the ‘workshop_data.gpkg’:</p>
+<p><i class="bi-archive " style="color: sienna;" role="img" aria-hidden="true"></i> workshop_data.gpkg<br>
+├── <i class="bi-building " style="color: gray;" role="img" aria-hidden="true"></i> buildings<br>
+└── <i class="bi-table " style="color: gray;" role="img" aria-hidden="true"></i> building_codelist</p>
+<p>Using GeoPandas, we’ll perform three successive joins to map each code level to its corresponding name, producing a more informative buildings layer. Finally, we’ll clean the dataset by keeping only the relevant columns and save the enriched layer back to the GeoPackage for easy use in QGIS or other GIS software.</p>
+<p>This step-by-step process showcases how simple it is to enhance geospatial data with Python and GeoPandas!</p>
+<section id="import-libraries-and-load-data" class="level2">
+<h2 class="anchored" data-anchor-id="import-libraries-and-load-data"><i class="bi-box-arrow-in-down " style="color: royalblue;" role="img" aria-hidden="true"></i> Import Libraries and Load Data</h2>
+<p>We’ll start by importing GeoPandas and reading the buildings layer and code list table from the GeoPackage.</p>
+<div class="sourceCode" id="cb26"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb26-1"><a href="#cb26-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> geopandas <span class="im">as</span> gpd</span>
+<span id="cb26-2"><a href="#cb26-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb26-3"><a href="#cb26-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Path to the GeoPackage file</span></span>
+<span id="cb26-4"><a href="#cb26-4" aria-hidden="true" tabindex="-1"></a>gpkg_path <span class="op">=</span> <span class="vs">r&quot;C:</span><span class="ch">\\</span><span class="vs">EFGS_Python</span><span class="ch">\\</span><span class="vs">workshop_data</span><span class="dv">.</span><span class="vs">gpkg&quot;</span></span>
+<span id="cb26-5"><a href="#cb26-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb26-6"><a href="#cb26-6" aria-hidden="true" tabindex="-1"></a><span class="co"># Names of the layers to load</span></span>
+<span id="cb26-7"><a href="#cb26-7" aria-hidden="true" tabindex="-1"></a>bldLayer <span class="op">=</span> <span class="st">&quot;buildings&quot;</span></span>
+<span id="cb26-8"><a href="#cb26-8" aria-hidden="true" tabindex="-1"></a>bldCodesLayer <span class="op">=</span> <span class="st">&quot;building_codelist&quot;</span></span>
+<span id="cb26-9"><a href="#cb26-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb26-10"><a href="#cb26-10" aria-hidden="true" tabindex="-1"></a><span class="co"># Read the buildings layer</span></span>
+<span id="cb26-11"><a href="#cb26-11" aria-hidden="true" tabindex="-1"></a>bld <span class="op">=</span> gpd.read_file(gpkg_path, layer<span class="op">=</span>bldLayer)</span>
+<span id="cb26-12"><a href="#cb26-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb26-13"><a href="#cb26-13" aria-hidden="true" tabindex="-1"></a><span class="co"># Read the building code descriptions</span></span>
+<span id="cb26-14"><a href="#cb26-14" aria-hidden="true" tabindex="-1"></a>bldCodes <span class="op">=</span> gpd.read_file(gpkg_path, layer<span class="op">=</span>bldCodesLayer)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="perform-joins-for-each-code-level" class="level2">
+<h2 class="anchored" data-anchor-id="perform-joins-for-each-code-level"><i class="bi-arrow-left-right " style="color: seagreen;" role="img" aria-hidden="true"></i> Perform Joins for Each Code Level</h2>
+<p>We join the descriptive <code>name</code> field from the <code>building_codelist</code> table to the three code levels in the buildings layer. Each join adds a human-readable building type name.</p>
+<div class="sourceCode" id="cb27"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb27-1"><a href="#cb27-1" aria-hidden="true" tabindex="-1"></a><span class="co"># The column in the code list that contains the descriptive name</span></span>
+<span id="cb27-2"><a href="#cb27-2" aria-hidden="true" tabindex="-1"></a>joinedColumn <span class="op">=</span> <span class="st">&#39;name&#39;</span></span>
+<span id="cb27-3"><a href="#cb27-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb27-4"><a href="#cb27-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Join the descriptions for type_level_1</span></span>
+<span id="cb27-5"><a href="#cb27-5" aria-hidden="true" tabindex="-1"></a>bld <span class="op">=</span> bld.merge(</span>
+<span id="cb27-6"><a href="#cb27-6" aria-hidden="true" tabindex="-1"></a>    bldCodes.rename(columns<span class="op">=</span>{joinedColumn: <span class="st">&#39;typeName_level_1&#39;</span>}),</span>
+<span id="cb27-7"><a href="#cb27-7" aria-hidden="true" tabindex="-1"></a>    left_on<span class="op">=</span><span class="st">&#39;type_level_1&#39;</span>,</span>
+<span id="cb27-8"><a href="#cb27-8" aria-hidden="true" tabindex="-1"></a>    right_on<span class="op">=</span><span class="st">&#39;code&#39;</span>,</span>
+<span id="cb27-9"><a href="#cb27-9" aria-hidden="true" tabindex="-1"></a>    how<span class="op">=</span><span class="st">&#39;left&#39;</span></span>
+<span id="cb27-10"><a href="#cb27-10" aria-hidden="true" tabindex="-1"></a>).drop(columns<span class="op">=</span>[<span class="st">&#39;code&#39;</span>])  <span class="co"># Drop duplicate &#39;code&#39; column after join</span></span>
+<span id="cb27-11"><a href="#cb27-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb27-12"><a href="#cb27-12" aria-hidden="true" tabindex="-1"></a><span class="co"># Join the descriptions for type_level_2</span></span>
+<span id="cb27-13"><a href="#cb27-13" aria-hidden="true" tabindex="-1"></a>bld <span class="op">=</span> bld.merge(</span>
+<span id="cb27-14"><a href="#cb27-14" aria-hidden="true" tabindex="-1"></a>    bldCodes.rename(columns<span class="op">=</span>{joinedColumn: <span class="st">&#39;typeName_level_2&#39;</span>}),</span>
+<span id="cb27-15"><a href="#cb27-15" aria-hidden="true" tabindex="-1"></a>    left_on<span class="op">=</span><span class="st">&#39;type_level_2&#39;</span>,</span>
+<span id="cb27-16"><a href="#cb27-16" aria-hidden="true" tabindex="-1"></a>    right_on<span class="op">=</span><span class="st">&#39;code&#39;</span>,</span>
+<span id="cb27-17"><a href="#cb27-17" aria-hidden="true" tabindex="-1"></a>    how<span class="op">=</span><span class="st">&#39;left&#39;</span></span>
+<span id="cb27-18"><a href="#cb27-18" aria-hidden="true" tabindex="-1"></a>).drop(columns<span class="op">=</span>[<span class="st">&#39;code&#39;</span>])</span>
+<span id="cb27-19"><a href="#cb27-19" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb27-20"><a href="#cb27-20" aria-hidden="true" tabindex="-1"></a><span class="co"># Join the descriptions for type_level_3</span></span>
+<span id="cb27-21"><a href="#cb27-21" aria-hidden="true" tabindex="-1"></a>bld <span class="op">=</span> bld.merge(</span>
+<span id="cb27-22"><a href="#cb27-22" aria-hidden="true" tabindex="-1"></a>    bldCodes.rename(columns<span class="op">=</span>{joinedColumn: <span class="st">&#39;typeName_level_3&#39;</span>}),</span>
+<span id="cb27-23"><a href="#cb27-23" aria-hidden="true" tabindex="-1"></a>    left_on<span class="op">=</span><span class="st">&#39;type_level_3&#39;</span>,</span>
+<span id="cb27-24"><a href="#cb27-24" aria-hidden="true" tabindex="-1"></a>    right_on<span class="op">=</span><span class="st">&#39;code&#39;</span>,</span>
+<span id="cb27-25"><a href="#cb27-25" aria-hidden="true" tabindex="-1"></a>    how<span class="op">=</span><span class="st">&#39;left&#39;</span></span>
+<span id="cb27-26"><a href="#cb27-26" aria-hidden="true" tabindex="-1"></a>).drop(columns<span class="op">=</span>[<span class="st">&#39;code&#39;</span>])</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="filter-columns-to-keep" class="level2">
+<h2 class="anchored" data-anchor-id="filter-columns-to-keep"><i class="bi-funnel " style="color: darkorange;" role="img" aria-hidden="true"></i> Filter Columns to Keep</h2>
+<p>Now that we’ve joined the descriptive names, we’ll clean up the dataset by keeping only the relevant columns: the original code fields, the new descriptive fields, and the geometry.</p>
+<div class="sourceCode" id="cb28"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb28-1"><a href="#cb28-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Define the columns we want to retain</span></span>
+<span id="cb28-2"><a href="#cb28-2" aria-hidden="true" tabindex="-1"></a>columnsToKeep <span class="op">=</span> [</span>
+<span id="cb28-3"><a href="#cb28-3" aria-hidden="true" tabindex="-1"></a>    <span class="st">&#39;geometry&#39;</span>,</span>
+<span id="cb28-4"><a href="#cb28-4" aria-hidden="true" tabindex="-1"></a>    <span class="st">&#39;type_level_1&#39;</span>,</span>
+<span id="cb28-5"><a href="#cb28-5" aria-hidden="true" tabindex="-1"></a>    <span class="st">&#39;type_level_2&#39;</span>,</span>
+<span id="cb28-6"><a href="#cb28-6" aria-hidden="true" tabindex="-1"></a>    <span class="st">&#39;type_level_3&#39;</span>,</span>
+<span id="cb28-7"><a href="#cb28-7" aria-hidden="true" tabindex="-1"></a>    <span class="st">&#39;typeName_level_1&#39;</span>,</span>
+<span id="cb28-8"><a href="#cb28-8" aria-hidden="true" tabindex="-1"></a>    <span class="st">&#39;typeName_level_2&#39;</span>,</span>
+<span id="cb28-9"><a href="#cb28-9" aria-hidden="true" tabindex="-1"></a>    <span class="st">&#39;typeName_level_3&#39;</span></span>
+<span id="cb28-10"><a href="#cb28-10" aria-hidden="true" tabindex="-1"></a>]</span>
+<span id="cb28-11"><a href="#cb28-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb28-12"><a href="#cb28-12" aria-hidden="true" tabindex="-1"></a><span class="co"># Filter the GeoDataFrame to keep only the selected columns</span></span>
+<span id="cb28-13"><a href="#cb28-13" aria-hidden="true" tabindex="-1"></a>bld <span class="op">=</span> bld[columnsToKeep]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="writing-the-resulting-layer" class="level2">
+<h2 class="anchored" data-anchor-id="writing-the-resulting-layer"><i class="bi-cloud-arrow-up " style="color: mediumvioletred;" role="img" aria-hidden="true"></i> Writing the Resulting Layer</h2>
+<div class="sourceCode" id="cb29"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb29-1"><a href="#cb29-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Write the result to a new layer in the same GeoPackage</span></span>
+<span id="cb29-2"><a href="#cb29-2" aria-hidden="true" tabindex="-1"></a>bld.to_file(gpkg_path, layer<span class="op">=</span><span class="st">&#39;buildings_codenames&#39;</span>, driver<span class="op">=</span><span class="st">&#39;GPKG&#39;</span>)</span>
+<span id="cb29-3"><a href="#cb29-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb29-4"><a href="#cb29-4" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">&quot;Join complete! The layer &#39;buildings_codenames&#39; is saved in the GeoPackage.&quot;</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </section>
 </section>
 
